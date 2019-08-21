@@ -1,0 +1,2 @@
+1. Reader and writer list will not have duplicate file names.
+2. Writer files will have proper formatted string (position<space>value).No junk string in writer file.

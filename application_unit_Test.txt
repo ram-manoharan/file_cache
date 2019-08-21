@@ -1,0 +1,36 @@
+Functionality cases :
+=====================
+
+1. Spawn single writer and reader thread - check reader1.out.txt file is properly populated and item_list file is properly updated.
+2. Spawn 2 writer threads (with different position updates) and 1 reader thread - check reader1.out.txt file is properly populated and item_list file is properly updated.
+3. Spawn  2 writer threads (with overlapping position updates) and 1 reader thread - check reader1.out.txt file is properly populated and item_list file is properly updated.
+4. Spawn 2 writer threads and 2 reader threads (with different position reads) and check the behaviour.
+5. Spawn 2 writer threads and 2 reader threads (with overlapping  position reads) and check the behaviour.
+6. Spawn writer and reader threads with overlapping positions and check "dirty cache" scenario. 
+7. Reduce the cache size much lower than the actual data size and check the behaviour.
+8. Read more unique data than cache size and verify LRU eviction.
+9. Overwrite the position which is already available in cache, with fully populated cache  and verify eviction is not triggered.
+
+Stability/Robustness cases :
+===========================
+
+1. Run application with empty reader_list_file and proper write_list_file  - check no reader thread is spawned and application is stable.
+2. Run application with empty reader1.txt and proper write_list_file  - check  reader thread is spawned and application is stable.
+3. Run application with empty write_list_file and proper reader_list_file - check no writer thread is spawned and application is stable.
+4. Run application with empty writer1.txt file and proper reader_list_file - check  writer thread is spawned and application is stable.
+5. Run application with empty item_list file.
+6. Run application with item_list file with line spaces.
+7. Run application with invalid item_list file.
+8. Run application with invalid read_list file.
+9. Run application with invalid write_list file.
+10. Run application with invalid position in read file.
+11. Run application with empty read_list and empty write_list files and check the application is quitting gracefully.
+
+
+Scale/Performance cases:
+=======================
+
+1. Spawn 100 reader threads and 1 writer thread and check the performance("READ-HEAVY scenario").
+2. Spawn 100 writer threads and 1 reader thread and check the performance(WRITE-HEAVY scenario).
+3. spawn 100 reader annd 100 writer threa and check for the behaviour.
+4. Spawn 100 writer threds and verify that item_list file is not corrupted.

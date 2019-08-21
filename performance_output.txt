@@ -1,0 +1,23 @@
+ram@ram-VirtualBox:~/work/cache/my_cache$ ./cache 1 reader_file.txt writer_file.txt items_file.txt
+  ->  Time taken by application:    0.300 seconds CPU time
+ram@ram-VirtualBox:~/work/cache/my_cache$ cp items_file_orig.txt items_file.txt
+ram@ram-VirtualBox:~/work/cache/my_cache$ ./cache 2 reader_file.txt writer_file.txt items_file.txt
+  ->  Time taken by application:    0.293 seconds CPU time
+ram@ram-VirtualBox:~/work/cache/my_cache$ cp items_file_orig.txt items_file.txt
+ram@ram-VirtualBox:~/work/cache/my_cache$ ./cache 3 reader_file.txt writer_file.txt items_file.txt
+  ->  Time taken by application:    0.274 seconds CPU time
+ram@ram-VirtualBox:~/work/cache/my_cache$ cp items_file_orig.txt items_file.txt
+ram@ram-VirtualBox:~/work/cache/my_cache$ ./cache 4 reader_file.txt writer_file.txt items_file.txt
+  ->  Time taken by application:    0.266 seconds CPU time
+ram@ram-VirtualBox:~/work/cache/my_cache$ cp items_file_orig.txt items_file.txt
+ram@ram-VirtualBox:~/work/cache/my_cache$ ./cache 5 reader_file.txt writer_file.txt items_file.txt
+  ->  Time taken by application:    0.256 seconds CPU time
+ram@ram-VirtualBox:~/work/cache/my_cache$ cp items_file_orig.txt items_file.txt
+ram@ram-VirtualBox:~/work/cache/my_cache$ ./cache 6 reader_file.txt writer_file.txt items_file.txt
+  ->  Time taken by application:    0.249 seconds CPU time
+ram@ram-VirtualBox:~/work/cache/my_cache$ cp items_file_orig.txt items_file.txt
+ram@ram-VirtualBox:~/work/cache/my_cache$ 
+
+
+
+As the cache size grows, we could see the time taken by the application decreases.This indicates the cache performance.

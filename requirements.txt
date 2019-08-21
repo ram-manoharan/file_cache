@@ -1,0 +1,2 @@
+Boost library
+C++11 compiler(Makefile supports g++ c++0x standard)
