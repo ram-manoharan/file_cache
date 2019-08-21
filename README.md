@@ -4,7 +4,7 @@ In memory File cache (Based on LRU eviction)
 
 Design :
 
-    Refer "cache_design.pdf"
+   Refer "cache_design.pdf"
 
 Requirements :
 
@@ -30,5 +30,3 @@ How to enable Debug?
 How to get performance Benchmark?
 
  Compile object file with "-DPERFORMANCE_TEST" (add in CXXFLAGS in Makefile).Refer "performance_output.txt" file for sample benchmarking.
-
-    
